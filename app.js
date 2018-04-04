@@ -27,6 +27,9 @@ game.addEventListener('mousedown', function(e) {
    }
 });
 
+
+
+
 //Listen for Guess
 guessBtn.addEventListener('click', function() {
     let guess = parseInt(guessInput.value);
