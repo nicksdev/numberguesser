@@ -32,17 +32,13 @@ guessBtn.addEventListener('click', function() {
     let guess = parseInt(guessInput.value);
 
     //Validate
-
     if(isNaN(guess) || guess < min || guess > max){
         setMessage('Please enter a number between ' + min + ' and ' + max, 'red');
     }
-
     //Check if Won
     if (guess === winningNum) {
         //Game Over Won
-
         gameOver(true, winningNum + ' is correct, You Win!');
-
     } else {
         // Wrong Number
         guessesLeft  -= 1;
@@ -50,8 +46,6 @@ guessBtn.addEventListener('click', function() {
         if(guessesLeft === 0){
             //Game Over
             gameOver(false, 'Game Over, you lost. The correct number was ' + winningNum);
-
-
         } else {
             //Game continues - answer wrong
             // Change border color
@@ -60,12 +54,8 @@ guessBtn.addEventListener('click', function() {
             setMessage(guess + ' is not correct, ' + guessesLeft + ' guesses left', 'red');
             //Clear Input
             guessInput.value = '';
-
         }
-
     }
-
-
 });
 
 
